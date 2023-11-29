@@ -100,7 +100,7 @@ function TableFunctions.GetUniqueValues(Array: {[number]: any}) : {[number]: any
 end
 
 
-function TableFunctions.InvertArray<T>(Array: {T}) : {T}
+function TableFunctions.InvertArray(Array: {[number]: any}) : {[number]: any}
 	local InvertedArray: {[number]: any} = {}
 	local Index = 1
 	for Count = #Array, 1, -1 do
@@ -111,10 +111,10 @@ function TableFunctions.InvertArray<T>(Array: {T}) : {T}
 	return InvertedArray
 end
 
-function TableFunctions.SubArray<T>(Array: {T}, StartPosition, EndPosition) : {T}
+function TableFunctions.SubArray(Array: {[number]: any}, StartPosition, EndPosition) : {[number]: any}
 	StartPosition = StartPosition or 1
 	EndPosition = EndPosition or #Array
-	local SubArray: {T} = {}
+	local SubArray: {[number]: any} = {}
 	local Index: number = 1
 
 	for Count = StartPosition, EndPosition, 1 do
